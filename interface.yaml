@@ -1,0 +1,14 @@
+# examples/srlinux/interface.yaml
+apiVersion: nwi.enc.nokia.com/v1alpha2
+kind: SRLinuxConfig
+metadata:
+  name: ethernet-1-8
+spec:
+  switchID: 192.168.32.13
+  path: /interface[name=ethernet-1/8]
+  properties:
+    name: "ethernet-1/8"
+    admin-state: enable
+    description: "Managed by ENC NwI Operator"
+    vlan-tagging: true
+    mtu: 1500

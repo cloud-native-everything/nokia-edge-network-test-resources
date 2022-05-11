@@ -1,0 +1,92 @@
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: macvlan-251
+spec:
+  config: '{
+  "cniVersion": "0.4.0",
+  "name": "macvlan-251",
+  "plugins": [{
+    "type": "macvlan",
+    "master": "VLAN-251",
+    "mode" : "passthru",
+    "ipam": {
+      "type": "host-local",
+      "subnet": "10.0.251.0/24"
+    }
+  },{
+  "type": "enc-nws",
+  "subnet": "macvrf-251",
+  "additional-config": {}
+  }]
+}'
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: macvlan-252
+spec:
+  config: '{
+  "cniVersion": "0.4.0",
+  "name": "macvlan-252",
+  "plugins": [{
+    "type": "macvlan",
+    "master": "VLAN-252",
+    "mode" : "passthru",
+    "ipam": {
+      "type": "host-local",
+      "subnet": "10.0.252.0/24"
+    }
+  },{
+  "type": "enc-nws",
+  "subnet": "macvrf-252",
+  "additional-config": {}
+  }]
+}'
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: macvlan-253
+spec:
+  config: '{
+  "cniVersion": "0.4.0",
+  "name": "macvlan-253",
+  "plugins": [{
+    "type": "macvlan",
+    "master": "VLAN-253",
+    "mode" : "passthru",
+    "ipam": {
+      "type": "host-local",
+      "subnet": "10.0.253.0/24"
+    }
+  },{
+  "type": "enc-nws",
+  "subnet": "macvrf-253",
+  "additional-config": {}
+  }]
+}'
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: macvlan-254
+spec:
+  config: '{
+  "cniVersion": "0.4.0",
+  "name": "macvlan-254",
+  "plugins": [{
+    "type": "macvlan",
+    "master": "VLAN-254",
+    "mode" : "passthru",
+    "ipam": {
+      "type": "host-local",
+      "subnet": "10.0.254.0/24"
+    }
+  },{
+  "type": "enc-nws",
+  "subnet": "macvrf-254",
+  "additional-config": {}
+  }]
+}'
